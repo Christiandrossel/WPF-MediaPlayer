@@ -1,0 +1,24 @@
+﻿<Window x:Class="WPFPlayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFPlayer"
+        mc:Ignorable="d"
+        Title="MainWindow"  Name="myWindow" Height="450" Width="800">
+    <Grid MouseLeftButtonDown="MouseLeftButton_Clicked">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <MediaElement Grid.Row="0" x:Name="wpfPlayer" LoadedBehavior="Manual" Margin="0,0,0,124" HorizontalAlignment="Center" Height="359" VerticalAlignment="Top" Width="792"/>
+        <Button Grid.Row="1" x:Name="Open_FileButton" Content="Open File" HorizontalAlignment="Left" Margin="184,389,0,0" VerticalAlignment="Top" Width="75" Click="Open_FileButton_Click"/>
+        <Button Grid.Row="1" x:Name="PlayButton" Content="Play" HorizontalAlignment="Left" Margin="264,389,0,0" VerticalAlignment="Top" Width="75" Click="PlayButton_Click"/>
+        <Button Grid.Row="1" x:Name="PauseButton" Content="Pause" HorizontalAlignment="Left" Margin="344,389,0,0" VerticalAlignment="Top" Width="75" Click="PauseButton_Click"/>
+        <Button Grid.Row="1" x:Name="FullscreenButton" Content="Fullscreen" HorizontalAlignment="Left" Margin="424,389,0,0" VerticalAlignment="Top" Width="75" Click="FullscreenButton_Click"/>
+        <Slider Grid.Row="1" x:Name="sliderTime" HorizontalAlignment="Left" Margin="10,364,0,0" VerticalAlignment="Top" Width="663" ValueChanged="sliderTime_ValueChanged"/>
+        <Slider Grid.Row="1" x:Name="sliderVolume" HorizontalAlignment="Left" Margin="10,391,0,0" VerticalAlignment="Top" Width="141" ValueChanged="sliderVolume_ValueChanged"/>
+        <Slider Grid.Row="1" x:Name="sliderBalance" HorizontalAlignment="Left" Margin="504,387,0,0" VerticalAlignment="Top" Width="169" Height="26" ValueChanged="sliderBalance_ValueChanged"/>
+        <Label Grid.Row="1" x:Name="lblStatus" Content="Label" HorizontalAlignment="Left" Margin="678,359,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
